@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h3 style="text-align:center;">Opioid deaths by county, 2010-2014</h3>
+
+
+<svg width="960" height="600"></svg>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/topojson.v2.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+<script>
+
+var DEATHRATE_LOWER_BOUND = 0.00001;
+var DEATHRATE_UPPER_BOUND = 0.0003;
+var svg = d3.select("svg");
+var div = d3.select("body").append("div").attr("class", "tooltip").style("opacity", 0);
+var projection = d3.geoAlbersUsa().scale(1280).translate([480, 300]);
+var path = d3.geoPath();
+var color = d3.scaleLinear().domain([DEATHRATE_LOWER_BOUND, DEATHRATE_UPPER_BOUND]).range(["#FFEDED", "#A6000F"]);
+// var color2 = d3.scaleThreshold().domain([0.00001, 0.0001, 0.001, 0.01, 0.1]).range(d3.schemeOrRd[5]);
+// var slider_value = 699;
+
+/*
+function getSnapshotFromIteration(all_snapshots, slider_value) {
+  return all_snapshots.filter((s) => {
+    return s.iter === slider_value;
+  });
+}
+*/
+
+// $(npm bin)/topo2geo counties=counties-geo.json < us-10m.v1.json
+// $(npm bin)/ndjson-reduce < 1000it.ndjson | $(npm bin)/ndjson-map '{iter:d}'> 1000it.json
+d3.queue()
+  .defer(d3.json, "us-10m.v1.json")
+  .defer(d3.json, "start10.json") // 1000, 1500, 2000, 2500, 3000
+  .defer(d3.json, "cities.json")
+  .await(ready);
+
+function ready(error, us, cluster, cities) {
+  if (error) throw error;
+  console.log("cities:", cities);
+/*
+  // todo: apply these when JSON file contains all iterations, not just one
+  var all_snapshots = cluster.iterations; // console.log(all_snapshots);
+  var snapshot = getSnapshotFromIteration(all_snapshots, slider_value);
+  var found = snapshot[0];
+  var clusters = found.clusters; // console.log("clusters", found.clusters);
+*/
+
+  // Munge data together so we can feed it into d3's `data()` function
+  var clusters = cluster.iter; // console.log("cluster.iter", cluster.iter);
+  var selected_clusters = clusters.map((c) => {
+    return {
+      "cluster": d3.set(c.counties),
+      "deathrate": c.deathrate
+    };
+  });
+
+  var cluster_payload = selected_clusters.map((c) => {
+    return topojson.merge(us, us.objects.counties.geometries.filter((d) => { return c.cluster.has(d.id); }));
+  });
+  var deathrate_payload = selected_clusters.map((c) => {
+    return c.deathrate;
+  }); // deathrate_payload.forEach((e) => { console.log(e); });
+
+  var cluster_visual = cluster_payload.map((e, i) => {
+    return {
+      "cluster": e,
+      "deathrate": deathrate_payload[i]
+    }
+  });
+
+  // Initialize the base map with the county polygons
+  svg.append("g")
+      .attr("class", "counties")
+    .selectAll("path")
+    .data(topojson.feature(us, us.objects.counties).features)
+    .enter().append("path")
+      .attr("d", path);
+
+  // Lay out border and fill color for each distinct cluster
+  svg.append("g")
+        .attr("class", "cluster")
+      .selectAll("path")
+      .data(cluster_visual)
+      .enter().append("path")
+        .attr("class", "cluster-selected")
+        .attr("d", (d) => { return path(d.cluster); })
+        .attr("fill", (d) => { return color(d.deathrate); });
+        // .attr("fill", (d) => { return color3(d.deathrate) });
+
+
+  // Lay out county borders as dotted lines
+  svg.append("g")
+      .attr("class", "county-borders")
+    .append("path")
+      .attr("d", path(topojson.mesh(us, us.objects.counties, (a, b) => { return a !== b; })));
+
+  // Lay out state borders
+  svg.append("g")
+      .attr("class", "states")
+    .selectAll("path")
+    .data(topojson.feature(us, us.objects.states).features)
+    .enter().append("path")
+      .attr("d", path);
+
+  svg.append("g")
+      .attr("class", "state-borders")
+    .append("path")
+      .attr("d", path(topojson.mesh(us, us.objects.states, (a, b) => { return a !== b; })));
+
+
+  // Lay out cities
+  svg.append("g")
+      .attr("class", "cities")
+    .selectAll("circle")
+    .data(cities)
+    .enter().append("circle")
+      .attr("cx", (d) => { return projection([d.longitude, d.latitude])[0]; })
+      .attr("cy", (d) => { return projection([d.longitude, d.latitude])[1]; })
+      .attr("r", "3px")
+      .on("mouseover", function(d) {
+        div.transition()
+           .duration(200)
+           .style("opacity", .9);
+           div.text(d.city)
+           .style("left", (d3.event.pageX) + "px")
+           .style("top", (d3.event.pageY - 28) + "px");
+        })
+      .on("mouseout", function(d) { // fade out tooltip on mouse out
+          div.transition()
+             .duration(500)
+             .style("opacity", 0);
+      });
+
+
+};
+
+</script>
+</body>
