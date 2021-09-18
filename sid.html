@@ -33,11 +33,16 @@
     font-size: 16px;
     font-weight: 400
   }
-  heading {
+  div.heading {
     font-family: 'Nunito', Verdana, Helvetica, sans-serif;
     font-size: 17px; /* 19 */
     font-weight: 600; /* 1000 */
   }
+  div.authors {
+    margin-top: 3px;
+    margin-bottom: 8px
+  }
+
   strong {
     font-family: 'Nunito', Verdana, Helvetica, sans-serif;
     font-size: 16px;
@@ -67,8 +72,6 @@
   img.pub {
     padding: 0px;
     margin: 0px;
-    border-radius:15px;
-    border:1px solid black;
   }
 
   .paper {
@@ -202,353 +205,166 @@
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
 
   <tr>
-    <td width="40%" valign="top" align="center"><a href="projects/active-safety-envelopes-with-guarantees" target="_blank"><img class="pub" src="projects/active-safety-envelopes-with-guarantees/resources/thumbnail/thumbnail_400px.gif" alt="image not found" width="93%""></a></td>
+    <td width="40%" valign="top" align="center"><a href="https://arxiv.org/abs/2011.07194" target="_blank"><img class="pub" src="website-photos/leveraging.png" alt="image not found" width="80%"></a></td>
     <td width="60%" valign="top">
-      <p><a href="projects/active-safety-envelopes-with-guarantees" target="_blank">
-      <sticker>NEW!</sticker> 
-      <heading>Active Safety Envelopes using Light Curtains with Probabilistic Guarantees</heading></a><br>
-      <b>Amanda Coston</b>, Gaurav Pathak, David Held, Srinivasa Narasimhan<br>
-      RSS 2021
+      <p><a href="https://arxiv.org/abs/2011.07194" target="_blank">
+      <div class="heading"><sticker>NEW!</sticker> Leveraging Administrative Data for Bias Audits: Assessing Disparate Coverage with Mobility Data for COVID-19 Policy</div></a>
+      <div class="authors"><b>A. Coston</b>, N. Guha, L. Lu, D. Ouyang, A. Chouldechova, D. Ho</div>
+      <i>ACM Conference on Fairness, Accountability, and Transparency (FAccT)</i>, 2021
       </p>
 
       <div>
-      <a href="projects/active-safety-envelopes-with-guarantees" target="_blank">webpage</a> |
-      <a href="javascript:toggleblock('rss21_abs')">abstract</a> |
-      <a href="https://arxiv.org/pdf/2107.04000.pdf" target="_blank">pdf</a> |
-      <a shape="rect" href="javascript:togglebib('rss21')" class="togglebib">bibtex</a> |
-      <a href="https://youtu.be/1PUAjzcTz5g" target="_blank">talk</a>
+      <a href="javascript:toggleblock('facct21_abs')">Abstract</a> |
+      <a href="https://dl.acm.org/doi/10.1145/3442188.3445881" target="_blank">Paper</a> |
+      <a href="https://arxiv.org/abs/2011.07194" target="_blank">ArXiv</a> |
+      <a href="https://www.youtube.com/watch?v=K2axD2sv-Uc" target="_blank">Talk</a>
 
 
-      <p align="justify"> <i id="rss21_abs">To safely navigate unknown environments, robots must accurately perceive dynamic obstacles. Instead of directly measuring the scene depth with a LiDAR sensor, we explore the use of a much cheaper and higher resolution sensor: <a href="https://www.cs.cmu.edu/~ILIM/light_curtains" target="_blank">programmable light curtains</a>. Light curtains are controllable depth sensors that sense only along a surface that a user selects. We use light curtains to estimate the safety envelope of a scene: a hypothetical surface that separates the robot from all obstacles. We show that generating light curtains that sense <b>random</b> locations (from a particular distribution) can quickly discover the safety envelope for scenes with unknown objects. Importantly, we produce theoretical safety guarantees on the probability of detecting an obstacle using random curtains. We combine random curtains with a machine learning based model that forecasts and tracks the motion of the safety envelope efficiently. Our method accurately estimates safety envelopes while providing probabilistic safety guarantees that can be used to certify the efficacy of a robot perception system to detect and avoid dynamic obstacles. We evaluate our approach in a simulated urban driving environment and a real-world environment with moving pedestrians using a light curtain device and show that we can estimate safety envelopes efficiently and effectively.</i></p>
+      <p align="justify"> <i id="facct21_abs">Anonymized smartphone-based mobility data has been widely adopted in devising and evaluating COVID-19 response strategies such as the targeting of public health resources. Yet little attention has been paid to measurement validity and demographic bias, due in part to the lack of documentation about which users are represented as well as the challenge of obtaining ground truth data on unique visits and demographics. We illustrate how linking large-scale administrative data can enable auditing mobility data for bias in the absence of demographic information and ground truth labels. More precisely, we show that linking voter roll data containing individual-level voter turnout for specific voting locations along with race and age can facilitate the construction of rigorous bias and reliability tests. Using data from North Carolina's 2018 general election, these tests illuminate a sampling bias that is particularly noteworthy in the pandemic context: older and non-white voters are less likely to be captured by mobility data. We show that allocating public health resources based on such mobility data could disproportionately harm high-risk elderly and minority groups.</i></p>
       <script xml:space="preserve" language="JavaScript">
-        hideblock('rss21_abs');
-      </script>
-      </div>
-    </td>
-  </tr>
-
-<tr>
-  <td colspan="2" style="padding: 0px">
-    <div class="paper" id="rss21">
-      <pre xml:space="preserve">
-@inproceedings{Ancha-RSS-21, 
-  author    = {Amanda Coston AND Gaurav Pathak AND Srinivasa Narasimhan AND David Held}, 
-  title     = {Active Safety Envelopes using Light Curtains with Probabilistic Guarantees}, 
-  booktitle = {Proceedings of Robotics: Science and Systems}, 
-  year      = {2021}, 
-  address   = {Virtual}, 
-  month     = {July}, 
-  doi       = {10.15607/rss.2021.xvii.045} 
-}</pre>
-    </div>
-  </td>
-</tr>
-
-  <tr>
-    <td width="40%" valign="top" align="center"><a href="https://soulslicer.github.io/rgb-lc-fusion" target="_blank"><img class="pub" src="images/cvpr21.png" alt="image not found" width="93%"></a></td>
-    <td width="60%" valign="top">
-      <p><a href="https://soulslicer.github.io/rgb-lc-fusion" target="_blank">
-      <!-- <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none"> -->
-      <heading>Exploiting & Refining Depth Distributions with Triangulation Light Curtains</heading></a><br>
-      Yaadhav Raaj, <b>Amanda Coston</b>, Robert Tamburo, David Held,<br>Srinivasa Narasimhan<br>
-      CVPR 2021
-      </p>
-
-      <div>
-      <a href="https://soulslicer.github.io/rgb-lc-fusion" target="_blank">webpage</a> |
-      <a href="javascript:toggleblock('cvpr21_abs')">abstract</a> |
-      <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Raaj_Exploiting__Refining_Depth_Distributions_With_Triangulation_Light_Curtains_CVPR_2021_paper.pdf" target="_blank">pdf</a> |
-      <a shape="rect" href="javascript:togglebib('cvpr21')" class="togglebib">bibtex</a> |
-      <a href="https://youtu.be/kIjn3U8luV0" target="_blank">talk</a>
-
-
-      <p align="justify"> <i id="cvpr21_abs">Active sensing through the use of adaptive depth sensors is a nascent field, with potential in areas such as advanced driver-assistance systems (ADAS). They do however require dynamically driving a laser / light-source to a specific location to capture information, with one such class of sensors being <a href="https://www.cs.cmu.edu/~ILIM/light_curtains" target="_blank">programmable light curtains</a>. In this work, we introduce a novel approach that exploits prior depth distributions from RGB cameras to drive a light curtain's laser line to regions of uncertainty to get new measurements. These measurements are utilized such that depth uncertainty is reduced and errors get corrected recursively. We show real-world experiments that validate our approach in outdoor and driving settings, and demonstrate qualitative and quantitative improvements in depth RMSE when RGB cameras are used in tandem with a light curtain.</i></p>
-      <script xml:space="preserve" language="JavaScript">
-        hideblock('cvpr21_abs');
-      </script>
-      </div>
-    </td>
-  </tr>
-
-<tr>
-  <td colspan="2" style="padding: 0px">
-    <div class="paper" id="cvpr21">
-      <pre xml:space="preserve">
-@inproceedings{cvpr2021raajexploiting,
-  author    = {Yaadhav Raaj, Amanda Coston, Robert Tamburo, David Held, Srinivasa Narasimhan},
-  title     = {Exploiting and Refining Depth Distributions with Triangulation Light Curtains},
-  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year      = {2021}
-}</pre>
-    </div>
-  </td>
-</tr>
-
-  <tr>
-    <td width="40%" valign="top" align="center"><a href="projects/active-perception-light-curtains" target="_blank"><img class="pub" src="projects/active-perception-light-curtains/resources/thumbnail.gif" alt="image not found" width="93%"></a></td>
-    <td width="60%" valign="top">
-      <p><a href="projects/active-perception-light-curtains" target="_blank">
-      <!-- <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none"> -->
-      <heading>Active Perception using Light Curtains for Autonomous Driving</heading></a><br>
-      <b>Amanda Coston</b>, Yaadhav Raaj, Peiyun Hu, Srinivasa Narasimhan,<br>  David Held<br>
-      ECCV 2020 <span style="color:red">(Spotlight presentation)</span>
-      </p>
-
-      <div>
-      <a href="projects/active-perception-light-curtains" target="_blank">webpage</a> |
-      <a href="javascript:toggleblock('eccv20_abs')">abstract</a> |
-      <a href="https://arxiv.org/pdf/2008.02191.pdf" target="_blank">pdf</a> |
-      <a shape="rect" href="javascript:togglebib('eccv20')" class="togglebib">bibtex</a> |
-      <a href="https://youtu.be/WSb5T3HFE7w" target="_blank">short talk</a> |
-      <a href="https://youtu.be/uRP63hHArU0" target="_blank">long talk</a> |
-      <a href="projects/active-perception-light-curtains/resources/long_talk.pdf" target="_blank">slides</a> |
-      <a href="https://github.com/siddancha/active-perception-light-curtains" target="_blank">code</a>
-
-
-      <p align="justify"> <i id="eccv20_abs">Most real-world 3D sensors such as LiDARs perform fixed scans of the entire environment, while being decoupled from the recognition system that processes the sensor data. In this work, we propose a method for 3D object recognition using light curtains, a resource-efficient controllable sensor that measures depth at user-specified locations in the environment. Crucially, we propose using prediction uncertainty of a deep learning based 3D point cloud detector to guide active perception. Given a neural network's uncertainty, we derive an optimization objective to place light curtains using the principle of maximizing information gain. Then, we develop a novel and efficient optimization algorithm to maximize this objective by encoding the physical constraints of the device into a constraint graph and optimizing with dynamic programming. We show how a 3D detector can be trained to detect objects in a scene by sequentially placing uncertainty-guided light curtains to successively improve detection accuracy.</i></p>
-      <script xml:space="preserve" language="JavaScript">
-        hideblock('eccv20_abs');
+        hideblock('facct21_abs');
       </script>
       </div>
     </td>
   </tr>
 
   <tr>
-    <td colspan="2" style="padding: 0px">
-      <div class="paper" id="eccv20">
-        <pre xml:space="preserve">
-@inproceedings{ancha2020eccv,
-  author    = {Ancha, Siddharth AND Raaj, Yaadhav AND Hu, Peiyun AND Narasimhan, Srinivasa G.
-              AND Held, David},
-  editor    = {Vedaldi, Andrea AND Bischof, Horst AND Brox, Thomas AND Frahm, Jan-Michael},
-  title     = {Active Perception Using Light Curtains for Autonomous Driving},
-  booktitle = {Computer Vision -- ECCV 2020},
-  year      = {2020},
-  publisher = {Springer International Publishing},
-  address   = {Cham},
-  pages     = {751--766},
-  isbn      = {978-3-030-58558-7}
-}</pre>
+    <td width="40%" valign="top" align="center"><a href="https://arxiv.org/abs/2101.00352" target="_blank"><img class="pub" src="website-photos/characterizing-fairness.png" alt="image not found" width="75%" style="border-width: 1px; border-style: solid; border-color: black;"></a></td>
+    <td width="55%" valign="top">
+      <p><a href="https://arxiv.org/abs/2101.00352" target="_blank">
+      <div class="heading">Characterizing Fairness over the Set of Good Models Under Selective Labels</div></a>
+      <div class="authors"><b>A. Coston</b>, A. Rambachan, A. Chouldechova</div>
+      <i>International Conference on Machine Learning (ICML)</i>, 2021
+      </p>
+
+      <div>
+      <a href="javascript:toggleblock('icml21_abs')">Abstract</a> |
+      <a href="https://arxiv.org/abs/2101.00352" target="_blank">ArXiv</a>
+
+
+      <p align="justify"> <i id="icml21_abs">Algorithmic risk assessments are used to inform decisions in a wide variety of high-stakes settings. Often multiple predictive models deliver similar overall performance but differ markedly in their predictions for individual cases, an empirical phenomenon known as the "Rashomon Effect." These models may have different properties over various groups, and therefore have different predictive fairness properties. We develop a framework for characterizing predictive fairness properties over the set of models that deliver similar overall performance, or "the set of good models." Our framework addresses the empirically relevant challenge of selectively labelled data in the setting where the selection decision and outcome are unconfounded given the observed data features. Our framework can be used to 1) replace an existing model with one that has better fairness properties; or 2) audit for predictive bias. We illustrate these uses cases on a real-world credit-scoring task and a recidivism prediction task.</i></p>
+      <script xml:space="preserve" language="JavaScript">
+        hideblock('icml21_abs');
+      </script>
       </div>
     </td>
   </tr>
 
+  <tr><td><div></div></td></tr>
   <tr>
-    <td width="40%" valign="top" align="center"><a href="https://www.jianrenw.com/Self-Supervised-3D-Data-Association" target="_blank"><img class="pub" src="images/iros20.jpeg" alt="image not found" width="93%"></a></td>
+    <td width="40%" valign="top" align="center"><a href="https://arxiv.org/abs/2006.16916" target="_blank"><img class="pub" src="website-photos/runtime-confounding.png" alt="image not found" width="85%"></a></td>
     <td width="60%" valign="top">
-      <p><a href="https://www.jianrenw.com/Self-Supervised-3D-Data-Association" target="_blank">
-      <!-- <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none"> -->
-      <heading>Uncertainty-Aware Self-Supervised 3D Data Association</heading></a><br>
-      Jianren Wang, <b>Amanda Coston</b>, Yi-Ting Chen, David Held<br>
-      IROS 2020
+      <p><a href="https://arxiv.org/abs/2006.16916" target="_blank">
+      <div class="heading">Counterfactual Predictions under Runtime Confounding</div></a>
+      <div class="authors"><b>A. Coston</b>, E. H. Kennedy, A. Chouldechova</div>
+      <i>Neural Information Processing Systems (NeurIPS)</i>, 2020
       </p>
 
       <div>
-      <a href="https://www.jianrenw.com/Self-Supervised-3D-Data-Association" target="_blank">webpage</a> |
-      <a href="javascript:toggleblock('iros20_abs')">abstract</a> |
-      <a href="https://arxiv.org/pdf/2008.08173v1.pdf" target="_blank">pdf</a> |
-      <a shape="rect" href="javascript:togglebib('iros20')" class="togglebib">bibtex</a> |
-      <a href="https://youtu.be/UkbiusxvAyk" target="_blank">talk</a> |
-      <a href="http://www.jianrenw.com/Self-Supervised-3D-Data-Association/resources/slides.pptx" target="_blank">slides</a> |
-      <a href="https://github.com/jianrenw/Self-Supervised-3D-Data-Association" target="_blank">code</a>
+      <a href="javascript:toggleblock('neurips20_abs')">Abstract</a> |
+      <a href="https://proceedings.neurips.cc/paper/2020/file/2b64c2f19d868305aa8bbc2d72902cc5-Paper.pdf" target="_blank">Paper</a> |
+      <a href="https://arxiv.org/abs/2006.16916" target="_blank">ArXiv</a> |
+      <a href="https://blog.ml.cmu.edu/2021/04/16/counterfactual-predictions-under-runtime-confounding/" target="_blank">Blog</a><br><br>
 
 
-      <p align="justify"> <i id="iros20_abs">3D object trackers usually require training on large amounts of annotated data that is expensive and time-consuming to collect. Instead, we propose leveraging vast unstickered datasets by self-supervised metric learning of 3D object trackers, with a focus on data association. Large scale annotations for unstickered data are cheaply obtained by automatic object detection and association across frames. We show how these self-supervised annotations can be used in a principled manner to learn point-cloud embeddings that are effective for 3D tracking. We estimate and incorporate uncertainty in self-supervised tracking to learn more robust embeddings, without needing any stickered data. We design embeddings to differentiate objects across frames, and learn them using uncertainty-aware self-supervised training. Finally, we demonstrate their ability to perform accurate data association across frames, towards effective and accurate 3D tracking.</i></p>
+      <p align="justify"> <i id="neurips20_abs">Algorithms are commonly used to predict outcomes under a particular decision or intervention, such as predicting whether an offender will succeed on parole if placed under minimal supervision. Generally, to learn such counterfactual prediction models from observational data on historical decisions and corresponding outcomes, one must measure all factors that jointly affect the outcomes and the decision taken. Motivated by decision support applications, we study the counterfactual prediction task in the setting where all relevant factors are captured in the historical data, but it is either undesirable or impermissible to use some such factors in the prediction model. We refer to this setting as runtime confounding. We propose a doubly-robust procedure for learning counterfactual prediction models in this setting. Our theoretical analysis and experimental results suggest that our method often outperforms competing approaches. We also present a validation procedure for evaluating the performance of counterfactual prediction methods.</i></p>
       <script xml:space="preserve" language="JavaScript">
-        hideblock('iros20_abs');
+        hideblock('neurips20_abs');
       </script>
       </div>
     </td>
   </tr>
 
   <tr>
-    <td colspan="2" style="padding: 0px">
-      <div class="paper" id="iros20">
-        <pre xml:space="preserve">
-@inproceedings{jianren20s3da,
-  author    = {Wang, Jianren AND Ancha, Siddharth AND Chen, Yi-Ting AND Held, David},
-  title     = {Uncertainty-aware Self-supervised 3D Data Association},
-  booktitle = {IROS},
-  year      = {2020}
-}</pre>
-      </div>
-    </td>
-  </tr>
-
-  <tr>
-    <td width="40%" valign="top" align="center"><a href="https://jnan1.github.io/FlowVerify" target="_blank"><img class="pub" src="images/corl19.png" alt="image not found" width="93%"></a></td>
-    <td width="60%" valign="top">
-      <p><a href="https://jnan1.github.io/FlowVerify/" target="_blank">
-      <!-- <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none"> -->
-      <heading>Combining Deep Learning and Verification for Precise Object Instance Detection</heading></a><br>
-      <b>Amanda Coston</b>*, Junyu Nan*, David Held<br>
-      CoRL 2019
+    <td width="40%" valign="top" align="left"><a href="https://arxiv.org/abs/1909.00066" target="_blank"><img class="pub" src="website-photos/counterfactual-evaluation.png" alt="image not found" width="90%"></a></td>
+    <td width="55%" valign="top">
+      <p><a href="https://arxiv.org/abs/1909.00066" target="_blank">
+      <div class="heading">Counterfactual Risk Assessments, Evaluation, and Fairness</div></a>
+      <div class="authors"><b>A. Coston</b>, A. Mishler, E. H. Kennedy, A. Chouldechova</div>
+      <i>ACM Conference on Fairness, Accountability, and Transparency (FAT*)</i>, 2020
       </p>
 
       <div>
-      <a href="https://jnan1.github.io/FlowVerify" target="_blank">webpage</a> |
-      <a href="javascript:toggleblock('corl19_abs')">abstract</a> |
-      <a href="https://arxiv.org/pdf/1912.12270.pdf" target="_blank">pdf</a> |
-      <a shape="rect" href="javascript:togglebib('corl19')" class="togglebib">bibtex</a> |
-      <a href="https://www.youtube.com/watch?time_continue=12696&v=QaCuEv_7lfs" target="_blank">talk</a> |
-      <a href="https://github.com/siddancha/FlowVerify" target="_blank">code</a>
+      <a href="javascript:toggleblock('facct20_abs')">Abstract</a> |
+      <a href="https://dl.acm.org/doi/abs/10.1145/3351095.3372851" target="_blank">Paper</a> |
+      <a href="https://arxiv.org/abs/1909.00066" target="_blank">ArXiv</a> |
+      <a href="https://www.youtube.com/watch?v=9zfi3heBYUs" target="_blank">Talk</a>
 
 
-      <p align="justify"> <i id="corl19_abs">Deep learning object detectors often return false positives with very high confidence. Although they optimize generic detection performance, such as mean average precision (mAP), they are not designed for reliability. For a reliable detection system, if a high confidence detection is made, we would want high certainty that the object has indeed been detected. To achieve this, we have developed a set of verification tests which a proposed detection must pass to be accepted. We develop a theoretical framework which proves that, under certain assumptions, our verification tests will not accept any false positives. Based on an approximation to this framework, we present a practical detection system that can verify, with high precision, whether each detection of a machine-learning based object detector is correct. We show that these tests can improve the overall accuracy of a base detector and that accepted examples are highly likely to be correct. This allows the detector to operate in a high precision regime and can thus be used for robotic perception systems as a reliable instance detection method.</i></p>
+      <p align="justify"> <i id="facct20_abs">Algorithmic risk assessments are increasingly used to help humans make decisions in high-stakes settings, such as medicine, criminal justice and education. In each of these cases, the purpose of the risk assessment tool is to inform actions, such as medical treatments or release conditions, often with the aim of reducing the likelihood of an adverse event such as hospital readmission or recidivism. Problematically, most tools are trained and evaluated on historical data in which the outcomes observed depend on the historical decision-making policy. These tools thus reflect risk under the historical policy, rather than under the different decision options that the tool is intended to inform. Even when tools are constructed to predict risk under a specific decision, they are often improperly evaluated as predictors of the target outcome. Focusing on the evaluation task, in this paper we define counterfactual analogues of common predictive performance and algorithmic fairness metrics that we argue are better suited for the decision-making context. We introduce a new method for estimating the proposed metrics using doubly robust estimation. We provide theoretical results that show that only under strong conditions can fairness according to the standard metric and the counterfactual metric simultaneously hold. Consequently, fairness-promoting methods that target parity in a standard fairness metric may --- and as we show empirically, do --- induce greater imbalance in the counterfactual analogue. We provide empirical comparisons on both synthetic data and a real world child welfare dataset to demonstrate how the proposed method improves upon standard practice.</i></p>
       <script xml:space="preserve" language="JavaScript">
-        hideblock('corl19_abs');
+        hideblock('facct20_abs');
       </script>
       </div>
     </td>
   </tr>
 
   <tr>
-    <td colspan="2" style="padding: 0px">
-      <div class="paper" id="corl19">
-        <pre xml:space="preserve">
-@inproceedings{FlowVerify2019CoRL,
-  author    = {Amanda Coston AND Junyu Nan AND David Held},
-  editor    = {Leslie Pack Kaelbling AND Danica Kragic AND Komei Sugiura},
-  title     = {Combining Deep Learning AND Verification for Precise Object Instance Detection},
-  booktitle = {3rd Annual Conference on Robot Learning, CoRL 2019, Osaka, Japan,
-               October 30 - November 1, 2019, Proceedings},
-  series    = {Proceedings of Machine Learning Research},
-  volume    = {100},
-  pages     = {122--141},
-  year      = {2019},
-  url       = {http://proceedings.mlr.press/v100/ancha20a.html},
-  timestamp = {Mon, 25 May 2020 15:01:26 +0200},
-  biburl    = {https://dblp.org/rec/conf/corl/AnchaNH19.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}</pre>
-      </div>
-    </td>
-  </tr>
-
-  <tr><td><sectionheading style="font-size: 19px;">&nbsp;&nbsp;Older Work</sectionheading></td></tr>
-
-  <tr>
-    <td width="40%" valign="top" align="center"><a href="https://arxiv.org/pdf/1805.08403.pdf" target="_blank"><img class="pub" src="images/miccai18.png" alt="image not found" width="93%"></a></td>
-    <td width="60%" valign="top">
-      <p><a href="https://arxiv.org/pdf/1805.08403.pdf" target="_blank">
-      <!-- <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none"> -->
-      <heading>Autofocus Layer for Semantic Segmentation</heading></a><br>
-      Yao Qin, Konstantinos Kamnitsas, <b>Amanda Coston</b>, Jay Nanavati, Garrison Cottrell, Antonio Criminisi, Aditya Nori<br>
-      MICCAI 2018 <span style="color:red">(Oral presentation)</span>
+    <td width="40%" valign="top" align="left"><a href="https://arxiv.org/abs/1910.07162" target="_blank"><img class="pub" src="website-photos/conditional-learning-fair-representations.png" alt="image not found" width="90%"></a></td>
+    <td width="65%" valign="top">
+      <p><a href="https://arxiv.org/abs/1910.07162" target="_blank">
+      <div class="heading">Conditional Learning of Fair Representations</div></a>
+      <div class="authors">H. Zhao, <b>A. Coston</b>, T. Adel, G. J. Gordon</div>
+      <i>International Conference on Learning Representations <br>(ICLR)</i>, 2020
       </p>
 
       <div>
-      <a href="javascript:toggleblock('miccai18_abs')">abstract</a> |
-      <a href="https://arxiv.org/pdf/1805.08403.pdf" target="_blank">pdf</a> |
-      <a shape="rect" href="javascript:togglebib('miccai18')" class="togglebib">bibtex</a> |
-      <a href="https://github.com/yaq007/Autofocus-Layer" target="_blank">code</a>
+      <a href="javascript:toggleblock('iclr20_abs')">Abstract</a> |
+      <a href="https://openreview.net/forum?id=Hkekl0NFPr" target="_blank">Paper</a> |
+      <a href="https://arxiv.org/abs/1910.07162" target="_blank">ArXiv</a> |
+      <a href="https://iclr.cc/virtual_2020/poster_Hkekl0NFPr.html" target="_blank">Talk</a>
 
-      <p align="justify"> <i id="miccai18_abs">We propose the autofocus convolutional layer for semantic segmentation with the objective of enhancing the capabilities of neural networks for multi-scale processing. Autofocus layers adaptively change the size of the effective receptive field based on the processed context to generate more powerful features. This is achieved by parallelising multiple convolutional layers with different dilation rates, combined with an attention mechanism that learns to focus on the optimal scales driven by context. By sharing the weights of parallel convolutions, we make the network scale-invariant, with only a modest increase in the number of parameters. The proposed autofocus layer can be easily integrated into existing networks to improve the model's representational power. Our method achieves very promising performance on the challenging tasks of multi-organ segmentation in pelvic CT scans and brain tumor segmentation in MRI scans.</i></p>
+
+      <p align="justify"> <i id="iclr20_abs">We propose a novel algorithm for learning fair representations that can simultaneously mitigate two notions of disparity among different demographic subgroups in the classification setting. Two key components underpinning the design of our algorithm are balanced error rate and conditional alignment of representations. We show how these two components contribute to ensuring accuracy parity and equalized false-positive and false-negative rates across groups without impacting demographic parity. Furthermore, we also demonstrate both in theory and on two real-world experiments that the proposed algorithm leads to a better utility-fairness trade-off on balanced datasets compared with existing algorithms on learning fair representations for classification.</i></p>
       <script xml:space="preserve" language="JavaScript">
-        hideblock('miccai18_abs');
+        hideblock('iclr20_abs');
       </script>
       </div>
     </td>
   </tr>
 
   <tr>
-    <td colspan="2" style="padding: 0px">
-      <div class="paper" id="miccai18">
-        <pre xml:space="preserve">
-@inproceedings{qin2018autofocus,
-  title        = {Autofocus layer for semantic segmentation},
-  author       = {Qin, Yao AND Kamnitsas, Konstantinos AND Ancha, Siddharth AND Nanavati, Jay
-                  AND Cottrell, Garrison AND Criminisi, Antonio AND Nori, Aditya},
-  booktitle    = {International conference on medical image computing and computer-assisted
-                  intervention (MICCAI)},
-  pages        = {603--611},
-  year         = {2018},
-  organization = {Springer}
-}</pre>
-      </div>
-    </td>
-  </tr>
-
-  <tr>
-    <td width="40%" valign="top" align="center"><a href="https://www.springerprofessional.de/en/lifted-auto-context-forests-for-brain-tumour-segmentation/12216560" target="_blank"><img class="pub" src="images/miccai16.png" alt="image not found" width="93%"></a></td>
-    <td width="60%" valign="top">
-      <p><a href="https://www.springerprofessional.de/en/lifted-auto-context-forests-for-brain-tumour-segmentation/12216560" target="_blank">
-      <!-- <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none"> -->
-      <heading>Lifted Auto-Context Forests for Brain Tumour Segmentation</heading></a><br>
-      Lo&#xEF;c Le Folgoc, Aditya V. Nori, <b>Amanda Coston</b>, Antonio Criminisi<br>
-      MICCAI 2016 BraTS Challenge <span style="color:red">(Winner)</span>
+    <td width="40%" valign="top" align="center"><a href="https://arxiv.org/abs/2007.07796" target="_blank"><img class="pub" src="website-photos/neural-topic-models-survival-small.png" alt="image not found" width="90%"></a></td>
+    <td width="65%" valign="top">
+      <p><a href="https://arxiv.org/abs/2007.07796" target="_blank">
+      <div class="heading">Neural Topic Models with Survival Supervision: Jointly Predicting Time-to-Event Outcomes and Learning How Clinical Features Relate</div></a>
+      <div class="authors">L. Li, R. Zuo, <b>A. Coston</b>, J. C. Weiss, G. H. Chen</div>
+      <i>International Conference on Artificial Intelligence in Medicine</i>, 2020
       </p>
 
       <div>
-      <a href="javascript:toggleblock('miccai16_abs')">abstract</a> |
-      <a href="https://www.springerprofessional.de/en/lifted-auto-context-forests-for-brain-tumour-segmentation/12216560" target="_blank">pdf</a> |
-      <a shape="rect" href="javascript:togglebib('miccai16')" class="togglebib">bibtex</a> |
+      <a href="javascript:toggleblock('icaim20_abs')">Abstract</a> |
+      <a href="https://link.springer.com/chapter/10.1007/978-3-030-59137-3_33" target="_blank">Paper</a> |
+      <a href="https://arxiv.org/abs/2007.07796" target="_blank">ArXiv</a>
 
-      <p align="justify"> <i id="miccai16_abs">We revisit <i>Auto-Context Forests</i> for brain tumour segmentation in multi-channel magnetic resonance images, where semantic context is progressively built and refined via successive layers of Decision Forests (DFs). Specifically, we make the following contributions: (1) improved generalization via an efficient node-splitting criterion based on hold-out estimates, (2) increased compactness at the tree level, thereby yielding shallow discriminative ensembles trained orders of magnitude faster, and (3) guided semantic bagging that exposes latent data-space semantics captured by forest pathways. The proposed framework is practical: the per-layer training is fast, modular and robust. It was a top performer in the MICCAI 2016 BraTS (Brain Tumour Segmentation) challenge, and this paper aims to discuss and provide details about the challenge entry.</i></p>
+
+      <p align="justify"> <i id="icaim20_abs">In time-to-event prediction problems, a standard approach to estimating an interpretable model is to use Cox proportional hazards, where features are selected based on lasso regularization or stepwise regression. However, these Cox-based models do not learn how different features relate. As an alternative, we present an interpretable neural network approach to jointly learn a survival model to predict time-to-event outcomes while simultaneously learning how features relate in terms of a topic model. In particular, we model each subject as a distribution over "topics", which are learned from clinical features as to help predict a time-to-event outcome. From a technical standpoint, we extend existing neural topic modeling approaches to also minimize a survival analysis loss function. We study the effectiveness of this approach on seven healthcare datasets on predicting time until death as well as hospital ICU length of stay, where we find that neural survival-supervised topic models achieves competitive accuracy with existing approaches while yielding interpretable clinical "topics" that explain feature relationships.</i></p>
       <script xml:space="preserve" language="JavaScript">
-        hideblock('miccai16_abs');
+        hideblock('icaim20_abs');
       </script>
       </div>
     </td>
   </tr>
 
+  <tr><td><div></div></td></tr>
   <tr>
-    <td colspan="2" style="padding: 0px">
-      <div class="paper" id="miccai16">
-        <pre xml:space="preserve">
-@inproceedings{le2016lifted,
-  title       = {Lifted auto-context forests for brain tumour segmentation},
-  author      = {Le Folgoc, Loic AND Nori, Aditya V AND Ancha, Siddharth AND Criminisi, Antonio},
-  booktitle   = {International Workshop on Brainlesion: Glioma, Multiple Sclerosis, Stroke and
-                 Traumatic Brain Injuries},
-  pages       = {171--183},
-  year        = {2016},
-  organization= {Springer}
-}</pre>
-      </div>
-    </td>
-  </tr>
-
-  <tr>
-    <td width="40%" valign="top" align="center"><a href="https://arxiv.org/pdf/1606.02275.pdf" target="_blank"><img src="images/neurips16.png" alt="image not found" width="72%"></a></td>
-    <td width="60%" valign="top">
-      <p><a href="https://arxiv.org/pdf/1606.02275.pdf" target="_blank">
-      <!-- <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none"> -->
-      <heading>Measuring the reliability of MCMC inference with bidirectional Monte Carlo</heading></a><br>
-      Roger B. Grosse, <b>Amanda Coston</b>, Daniel M. Roy<br>
-      NeurIPS 2016</span>
+    <td width="40%" valign="top" align="center"><a href="https://dl.acm.org/doi/10.1145/3306618.3314236" target="_blank"><img class="pub" src="website-photos/transfer-learning.png" alt="image not found" width="85%"></a></td>
+    <td width="65%" valign="top">
+      <p><a href="https://dl.acm.org/doi/10.1145/3306618.3314236" target="_blank">
+      <div class="heading">Fair Transfer Learning with Missing Protected Attributes</div></a>
+      <div class="authors"><b>A. Coston</b>, K. N. Ramamurthy, D. Wei, K. R. Varshney, S. Speakman, Z. Mustahsan, S. Chakraborty</div>
+      <i>AAAI/ACM Conference on Artificial Intellligence, Ethics, and Society (AIES)</i>, 2019
       </p>
 
       <div>
-      <a href="javascript:toggleblock('neurips16_abs')">abstract</a> |
-      <a href="https://arxiv.org/pdf/1606.02275.pdf" target="_blank">pdf</a> |
-      <a shape="rect" href="javascript:togglebib('neurips16')" class="togglebib">bibtex</a> |
-      <a href="https://github.com/siddancha/AutoBDMC" target="_blank">code</a>
+      <a href="javascript:toggleblock('aies19_abs')">Abstract</a> |
+      <a href="https://dl.acm.org/doi/10.1145/3306618.3314236" target="_blank">Paper</a>
 
-      <p align="justify"> <i id="neurips16_abs">Markov chain Monte Carlo (MCMC) is one of the main workhorses of probabilistic inference, but it is notoriously hard to measure the quality of approximate posterior samples. This challenge is particularly salient in black box inference methods, which can hide details and obscure inference failures. In this work, we extend the recently introduced bidirectional Monte Carlo technique to evaluate MCMC-based posterior inference algorithms. By running annealed importance sampling (AIS) chains both from prior to posterior and vice versa on simulated data, we upper bound in expectation the symmetrized KL divergence between the true posterior distribution and the distribution of approximate samples. We present <i>Bounding Divergences with REverse Annealing (BREAD)</i>, a protocol for validating the relevance of simulated data experiments to real datasets, and integrate it into two probabilistic programming languages: <a href="http://webppl.org/" target="_blank">WebPPL</a> and <a href="https://mc-stan.org/" target="_blank">Stan</a>. As an example of how BREAD can be used to guide the design of inference algorithms, we apply it to study the effectiveness of different model representations in both WebPPL and Stan.</i></p>
+
+      <p align="justify"> <i id="aies19_abs">Risk assessment is a growing use for machine learning models. When used in high-stakes applications, especially ones regulated by anti-discrimination laws or governed by societal norms for fairness, it is important to ensure that learned models do not propagate and scale any biases that may exist in training data. In this paper, we add on an additional challenge beyond fairness: unsupervised domain adaptation to covariate shift between a source and target distribution. Motivated by the real-world problem of risk assessment in new markets for health insurance in the United States and mobile money-based loans in East Africa, we provide a precise formulation of the machine learning with covariate shift and score parity problem. Our formulation focuses on situations in which protected attributes are not available in either the source or target domain. We propose two new weighting methods: prevalence-constrained covariate shift (PCCS) which does not require protected attributes in the target domain and target-fair covariate shift (TFCS) which does not require protected attributes in the source domain. We empirically demonstrate their efficacy in two applications.</i></p>
       <script xml:space="preserve" language="JavaScript">
-        hideblock('neurips16_abs');
+        hideblock('aies19_abs');
       </script>
-      </div>
-    </td>
-  </tr>
-
-  <tr>
-    <td colspan="2" style="padding: 0px">
-      <div class="paper" id="neurips16">
-        <pre xml:space="preserve">
-@inproceedings{NIPS2016_0e9fa1f3,
-  author    = {Grosse, Roger B AND Ancha, Siddharth AND Roy, Daniel M},
-  booktitle = {Advances in Neural Information Processing Systems},
-  editor    = {D. Lee AND M. Sugiyama AND U. Luxburg AND I. Guyon AND R. Garnett},
-  pages     = {},
-  publisher = {Curran Associates, Inc.},
-  title     = {Measuring the reliability of MCMC inference with bidirectional Monte Carlo},
-  url       = {https://proceedings.neurips.cc/paper/2016/file/
-               0e9fa1f3e9e66792401a6972d477dcc3-Paper.pdf},
-  volume    = {29},
-  year      = {2016}
-}</pre>
       </div>
     </td>
   </tr>
