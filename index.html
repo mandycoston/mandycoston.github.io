@@ -357,9 +357,110 @@
 <hr style="margin-top: 20px;">
 
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
+  <tr><td><sectionheading>&nbsp;&nbsp;Working papers</sectionheading></td></tr>
+</table>
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
+
+  <tr>
+    <td width="40%" valign="top" align="center"><a href="https://www.youtube.com/watch?v=UuDdxtQEc7I&list=PLHtzc5hGcx9sjwuETR3izb27TJSauQ4EO" target="_blank"><img class="pub" src="website-photos/madison-police.png" alt="image not found" width="85%"></a></td>
+    <td width="60%" valign="top">
+      <p><a href="https://www.youtube.com/watch?v=UuDdxtQEc7I&list=PLHtzc5hGcx9sjwuETR3izb27TJSauQ4EO" target="_blank">
+      <div class="heading">Counterfactual audit of racial bias in police traffic stops</div></a>
+      <div class="authors"><b>A. Coston</b>, E. H. Kennedy</div>
+      <i>American Causal Inference Conference (ACIC) </i>, 2022</i>
+      <div style="color: red;"><i>Oral presentation (20% selection rate)</i></div>
+      </p>
+
+      <div>
+      <a href="javascript:toggleblock('police_stops_abs')">Abstract</a> |
+      <a href="https://www.youtube.com/watch?v=UuDdxtQEc7I&list=PLHtzc5hGcx9sjwuETR3izb27TJSauQ4EO" target="_blank">Talk</a>
+
+
+      <p align="justify"> <i id="police_stops_abs">Racial bias in criminal justice has profound consequences. This bias harms not only the participant of the encounter but also has far-reaching implications, particularly in the era of big data. These interactions are often recorded and used to build algorithms that shape future encounters with the criminal justice system. In order to guard against automating biases in these high-stakes algorithms, we must identify when and where bias occurs in the criminal justice pipeline. 
+
+        We consider racial bias in one of the most common points of entry: police traffic stops. Building on the tradition that uses the "veil of darkness" to test for racial bias in officer's decisions to stop, we propose a counterfactual audit for racial bias that clarifies the assumptions needed to identify racial bias. A central challenge is that standard measures of effect are not identifiable due to the outcome-dependent sampling of police traffic stop data. As a solution, we identify an odds ratio that recovers a test for differences in the race-conditional risk ratios under Bernoulli sampling. We propose an efficient estimator for the identified odds ratio using doubly-robust techniques that allow for flexible, non-parametric estimation. We present empirical results on the Stanford Open Policing data.</i></p>
+      <script xml:space="preserve" language="JavaScript">
+        hideblock('police_stops_abs');
+      </script>
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td width="40%" valign="top" align="center"><a href="https://arxiv.org/abs/2207.09016" target="_blank"><img class="pub" src="website-photos/geomean.png" alt="image not found" width="80%"></a></td>
+    <td width="60%" valign="top">
+      <p><a href="https://arxiv.org/abs/2207.09016" target="_blank">
+      <div class="heading">The role of the geometric mean in case-control studies</div></a>
+      <div class="authors"><b>A. Coston</b>, E. H. Kennedy</div>
+      </p>
+
+      <div>
+      <a href="javascript:toggleblock('geometric_mean_abs')">Abstract</a> |
+      <a href="https://arxiv.org/abs/2207.09016" target="_blank">ArXiv</a>
+
+      <p align="justify"> <i id="geometric_mean_abs">Historically used in settings where the outcome is rare or data collection is expensive, outcome-dependent sampling is relevant to many modern settings where data is readily available for a biased sample of the target population, such as public administrative data. Under outcome-dependent sampling, common effect measures such as the average risk difference and the average risk ratio are not identified, but the conditional odds ratio is. Aggregation of the conditional odds ratio is challenging since summary measures are generally not identified. Furthermore, the marginal odds ratio can be larger (or smaller) than all conditional odds ratios. This so-called non-collapsibility of the odds ratio is avoidable if we use an alternative aggregation to the standard arithmetic mean. We provide a new definition of collapsibility that makes this choice of aggregation method explicit, and we demonstrate that the odds ratio is collapsible under geometric aggregation. We describe how to partially identify, estimate, and do inference on the geometric odds ratio under outcome-dependent sampling. Our proposed estimator is based on the efficient influence function and therefore has doubly robust-style properties.</i></p>
+      <script xml:space="preserve" language="JavaScript">
+        hideblock('geometric_mean_abs');
+      </script>
+      </div>
+    </td>
+  </tr>
+
+  <tr><td><div></div></td></tr>
+
+  <tr>
+    <td width="40%" valign="top" align="center"><a href="https://www.cs.cmu.edu/~acoston/counterfactual-under-unmeasured-conf-RCK.pdf" target="_blank"><img class="pub" src="website-photos/unmeasured-confounding.png" alt="image not found" width="80%"></a></td>
+    <td width="60%" valign="top">
+      <p><a href="https://www.cs.cmu.edu/~acoston/counterfactual-under-unmeasured-conf-RCK.pdf" target="_blank">
+      <div class="heading"> Counterfactual risk assessments under unmeasured confounding</div></a>
+      <div class="authors">A. Rambachan, <b>A. Coston</b>, E. H. Kennedy</div>
+      <i>NeurIPS Workshop on Algorithmic Fairness through the Lens of Causality and Privacy</i>, 2022
+      </p>
+
+      <div>
+      <a href="javascript:toggleblock('cfactual_risk_asses_abs')">Abstract</a> |
+      <a href="https://www.cs.cmu.edu/~acoston/counterfactual-under-unmeasured-conf-RCK.pdf" target="_blank">Paper</a> 
+
+      <p align="justify"> <i id="cfactual_risk_asses_abs">Statistical risk assessments inform consequential decisions such as pretrial release in criminal justice, and loan approvals in consumer finance. Such risk assessments make counterfactual predictions, predicting the likelihood of an outcome under a proposed decision (e.g., what would happen if we approved this loan?). A central challenge, however, is that there may have been unobserved confounders that jointly affected past decisions and outcomes in the historical data. This paper proposes a tractable mean outcome sensitivity model that bounds the extent to which unmeasured confounders could affect outcomes on average. The mean outcome sensitivity model partially identifies the conditional likelihood of the outcome under the proposed decision as well as popular predictive performance metrics (accuracy, calibration, TPR, FPR, etc.) and commonly-used predictive disparities, and we derive their sharp identified sets. We then solve three tasks that are essential to deploying statistical risk assessments in high-stakes settings. First, we propose a learning procedure based on doubly-robust pseudo-outcomes that estimates bounds on the conditional likelihood of the outcome under the proposed decision, and derive a bound on its integrated mean square error. Second, we show how our estimated bounds on the conditional likelihood of the outcome under the proposed decision can be translated into a robust, plug-in decision-making policy, and derive bounds on its worst-case regret relative to the max-min optimal decision rule. Third, we develop estimators of the bounds on the predictive performance metrics of existing risk assessment that are based on efficient influence functions and cross-fitting, and only require black-box access to the risk assessment.</i></p>
+      <script xml:space="preserve" language="JavaScript">
+        hideblock('cfactual_risk_asses_abs');
+      </script>
+      </div>
+    </td>
+  </tr>
+
+</table>
+<br>
+
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
   <tr><td><sectionheading>&nbsp;&nbsp;Publications</sectionheading></td></tr>
 </table>
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
+
+  <tr>
+    <td width="40%" valign="top" align="center"><a href="https://openreview.net/forum?id=LghfT9-phCc" target="_blank"><img class="pub" src="website-photos/justi.png" alt="image not found" width="80%"></a></td>
+    <td width="60%" valign="top">
+      <p><a href="https://openreview.net/forum?id=LghfT9-phCc" target="_blank">
+      <div class="heading">A Validity Perspective on Evaluating the Justified Use of Data-driven Decision-making Algorithms</div></a>
+      <div class="authors"><b>A. Coston</b>, A. Kawakami, H. Zhu, K. Holstein, H. Heidari</div>
+      <i>IEEE Conference on Secure and Trustworthy Machine Learning (SATML), to appear
+        </i>, 2023
+      </p>
+
+      <div>
+      <a href="javascript:toggleblock('satml23_abs')">Abstract</a> |
+      <a href="https://openreview.net/forum?id=LghfT9-phCc" target="_blank">Paper</a> |
+      <a href="https://arxiv.org/abs/2011.07194" target="_blank">ArXiv</a> 
+
+
+<p align="justify"> <i id="satml23_abs">Recent research increasingly brings to question the appropriateness of using predictive tools in complex, real-world tasks. While a growing body of work has explored ways to improve value alignment in these tools, comparatively less work has centered concerns around the fundamental justifiability of using these tools. This work seeks to center validity considerations in deliberations around whether and how to build data-driven algorithms in high-stakes domains. Toward this end, we translate key concepts from validity theory to predictive algorithms. We apply the lens of validity to re-examine common challenges in problem formulation and data issues that jeopardize the justifiability of using predictive algorithms and connect these challenges to the social science discourse around validity. Our interdisciplinary exposition clarifies how these concepts apply to algorithmic decision making contexts. 
+  We demonstrate how these validity considerations could distill into a series of high-level questions intended to promote and document reflections on the legitimacy of the predictive task and the suitability of the data.</i></p>
+<script xml:space="preserve" language="JavaScript">
+  hideblock('satml23_abs');
+</script>
+</div>
+</td>
+</tr>
 
   <tr>
     <td width="40%" valign="top" align="center"><a href="https://arxiv.org/abs/2011.07194" target="_blank"><img class="pub" src="website-photos/leveraging.png" alt="image not found" width="80%"></a></td>
