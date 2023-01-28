@@ -43,6 +43,20 @@
     margin-bottom: 8px
   }
 
+  div.news {
+    height: 250px;
+    overflow-y: scroll
+  }
+  div.news::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+  }
+  div.news::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+  }
+
   strong {
     font-family: 'Nunito', Verdana, Helvetica, sans-serif;
     font-size: 16px;
@@ -165,7 +179,7 @@
   <tr><td><sectionheading>&nbsp;&nbsp;News</sectionheading></td></tr>
 </table>
 
-<div style="height:250px;overflow:auto;">
+<div class="news">
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="5">
   <tr>
     <td width="15%" valign="top" align="right"><b><i>Nov 15, 2022</i></b></td>
