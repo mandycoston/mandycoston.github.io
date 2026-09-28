@@ -195,6 +195,10 @@
 <div class="news" tabindex="0" role="region" aria-label="Recent news">
 <table id="news" width="100%" align="center" border="0" cellspacing="0" cellpadding="8">
   <tr>
+    <td width="16%" valign="top" align="right" style="white-space: nowrap;"><b>Jun 2026</b></td>
+    <td width="84%" valign="top" align="left" style="padding-left: 10px;"> <a href="https://arxiv.org/abs/2606.14506">Evaluating Predictions under Distribution Shift and Selective Labels</a> accepted to NeurIPS (joint with Annie Ulichney).</td>
+  </tr>
+  <tr>
     <td width="16%" valign="top" align="right" style="white-space: nowrap;"><b>Aug 2026</b></td>
     <td width="84%" valign="top" align="left" style="padding-left: 10px;">&#127942; Awarded a <a href="https://www.russellsage.org/research/grants/investigating-impact-immigration-enforcement-civic-mobility-and-local-economic">Russell Sage Foundation research grant</a>!</td>
   </tr>
@@ -204,7 +208,7 @@
   </tr>
   <tr>
     <td width="16%" valign="top" align="right" style="white-space: nowrap;"><b>Jun 2026</b></td>
-    <td width="84%" valign="top" align="left" style="padding-left: 10px;">Two papers at FAccT: <a href="https://doi.org/10.1145/3805689.3812310">Falsifying the Discriminant Validity of Predictive Algorithms</a> and <a href="https://doi.org/10.1145/3805689.3812209">Judging the Judges</a>.</td>
+    <td width="84%" valign="top" align="left" style="padding-left: 10px;">Two papers at FAccT: <a href="https://doi.org/10.1145/3805689.3812310">Falsifying the Discriminant Validity of Predictive Algorithms</a> and <a href="https://doi.org/10.1145/3805689.3812209">Judging the Judges</a> with Julian Morimoto.</td>
   </tr>
   <tr>
     <td width="16%" valign="top" align="right" style="white-space: nowrap;"><b>Jun 2026</b></td>
@@ -551,32 +555,6 @@
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
   <tr>
     <td width="40%" valign="top" align="center">
-      <a href="https://arxiv.org/abs/2606.14506" target="_blank">
-        <img class="pub" src="website-photos/distribution-shift.jpeg" alt="Source and target feature distributions under covariate shift and selective label observability" width="80%">
-      </a>
-    </td>
-    <td width="60%" valign="top">
-      <div style="margin-top: 16px;">
-        <a href="https://arxiv.org/abs/2606.14506" target="_blank"><div class="heading">Beyond the Training Distribution: Evaluating Predictions Under Distribution Shift and Selection Bias</div></a>
-        <div class="authors">A. Ulichney, <b>A. Coston</b></div>
-        <i>ArXiv Preprint</i>, 2026<br>
-        <i>NeurIPS Workshop on Reliable ML from Unreliable Data</i>, 2025
-      </div>
-      <p><a href="javascript:toggleblock('distribution_shift_abs')">Abstract</a> |
-      <a href="https://arxiv.org/abs/2606.14506" target="_blank">ArXiv</a> |
-      <a href="https://openreview.net/forum?id=8vP16y0vEr" target="_blank">Workshop paper</a></p>
-      <p align="justify"><i id="distribution_shift_abs">Understanding how a prediction model will perform in a new environment before deployment is essential to preventing harm when algorithms inform decision-making. Two common sources of model performance degradation are (i) covariate shift, where the target covariate distribution differs from the source, and (ii) selective labels, where the observability of outcomes depends on historical decisions. We study pre-deployment model evaluation under the joint presence of covariate shift and labeling of outcomes selectively based on observed features. In particular, we present a double machine learning procedure for estimating the target risk of an arbitrary black-box prediction model under a general loss function. We show identification of this estimand under standard assumptions and derive a bias-corrected estimator based on the influence function of the target risk. Finally, we evaluate our estimator through experiments using the eICU electronic health records database, showing that it tracks the true target risk more accurately than methods that address either selective labels or covariate shift alone, as well as baselines that combine standard plug-in approaches.</i></p>
-      <script type="text/javascript">
-        hideblock('distribution_shift_abs');
-      </script>
-    </td>
-  </tr>
-
-
-
-
-  <tr>
-    <td width="40%" valign="top" align="center">
       <a href="https://arxiv.org/abs/2507.05216" target="_blank">
         <img class="pub" src="website-photos/bridging.png" alt="Science of Algorithmic Decision Support: Prediction as Intervention diagram" width="80%" style="border: 1px solid #000;">
       </a>
@@ -655,6 +633,27 @@
   <tr><td><sectionheading>&nbsp;&nbsp;Selected Publications</sectionheading></td></tr>
 </table>
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
+  <tr>
+    <td width="40%" valign="top" align="center">
+      <a href="https://arxiv.org/abs/2606.14506" target="_blank">
+        <img class="pub" src="website-photos/distribution-shift.jpeg" alt="Source and target feature distributions under covariate shift and selective label observability" width="80%">
+      </a>
+    </td>
+    <td width="60%" valign="top">
+      <div style="margin-top: 16px;">
+        <a href="https://arxiv.org/abs/2606.14506" target="_blank"><div class="heading">Beyond the Training Distribution: Evaluating Predictions Under Distribution Shift and Selection Bias</div></a>
+        <div class="authors">A. Ulichney, <b>A. Coston</b></div>
+        <i>Advances in Neural Information Processing Systems (NeurIPS)</i>, 2026 (To Appear)<br>
+      </div>
+      <p><a href="javascript:toggleblock('distribution_shift_abs')">Abstract</a> |
+      <a href="https://arxiv.org/abs/2606.14506" target="_blank">ArXiv</a> |
+      <a href="https://openreview.net/forum?id=8vP16y0vEr" target="_blank">Workshop paper</a></p>
+      <p align="justify"><i id="distribution_shift_abs">Understanding how a prediction model will perform in a new environment before deployment is essential to preventing harm when algorithms inform decision-making. Two common sources of model performance degradation are (i) covariate shift, where the target covariate distribution differs from the source, and (ii) selective labels, where the observability of outcomes depends on historical decisions. We study pre-deployment model evaluation under the joint presence of covariate shift and labeling of outcomes selectively based on observed features. In particular, we present a double machine learning procedure for estimating the target risk of an arbitrary black-box prediction model under a general loss function. We show identification of this estimand under standard assumptions and derive a bias-corrected estimator based on the influence function of the target risk. Finally, we evaluate our estimator through experiments using the eICU electronic health records database, showing that it tracks the true target risk more accurately than methods that address either selective labels or covariate shift alone, as well as baselines that combine standard plug-in approaches.</i></p>
+      <script type="text/javascript">
+        hideblock('distribution_shift_abs');
+      </script>
+    </td>
+  </tr>
   <tr>
     <td width="40%" valign="top" align="center">
       <a href="https://arxiv.org/abs/2601.17146" target="_blank">
