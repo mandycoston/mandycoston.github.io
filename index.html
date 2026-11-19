@@ -196,8 +196,12 @@ My work draws on nonparametric statistics, machine learning, causal inference, s
 <div class="news" tabindex="0" role="region" aria-label="Recent news">
 <table id="news" width="100%" align="center" border="0" cellspacing="0" cellpadding="8">
   <tr>
-    <td width="16%" valign="top" align="right" style="white-space: nowrap;"><b>Sep 2026</b></td>
-    <td width="84%" valign="top" align="left" style="padding-left: 10px;"> &#127942;  Awarded a <a href= "https://cdss.berkeley.edu/">CDSS</a> Machine Learning Research Award, sponsored by Citadel Securities. Thanks for the support!</td>
+    <td width="16%" valign="top" align="right" style="white-space: nowrap;"><b>Nov 19, 2026</b></td>
+    <td width="84%" valign="top" align="left" style="padding-left: 10px;">New preprint with Jennifer Zhang: <a href="https://arxiv.org/abs/2611.23638">When Do LLMs Model the Right Target? Problem Formulation in High-Stakes Risk Prediction</a>.</td>
+  </tr>
+  <tr>
+    <td width="16%" valign="top" align="right" style="white-space: nowrap;"><b>Nov 2026</b></td>
+    <td width="84%" valign="top" align="left" style="padding-left: 10px;">&#127942; Awarded a <a href="https://cdss.berkeley.edu/news/nine-cdss-faculty-receive-machine-learning-research-awards">CDSS Machine Learning Research Award</a>, supported by Citadel Securities, for research on evaluating predictive algorithms under confounding, measurement error, and distribution shift. Thanks for the support!</td>
   </tr>
   <tr>
     <td width="16%" valign="top" align="right" style="white-space: nowrap;"><b>Sep 2026</b></td>
@@ -467,6 +471,10 @@ My work draws on nonparametric statistics, machine learning, causal inference, s
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="5">
   <tr>
     <td width="12%" valign="top" align="right"><b><i>2026</i></b></td>
+    <td width="88%" valign="top" align="left" style="padding-left: 10px;"><a href="https://cdss.berkeley.edu/news/nine-cdss-faculty-receive-machine-learning-research-awards">CDSS Machine Learning Research Award</a>, supported by Citadel Securities.</td>
+  </tr>
+  <tr>
+    <td width="12%" valign="top" align="right"><b><i>2026</i></b></td>
     <td width="88%" valign="top" align="left" style="padding-left: 10px;"><a href="https://www.russellsage.org/research/grants/investigating-impact-immigration-enforcement-civic-mobility-and-local-economic">Russell Sage Foundation Research Grant</a> recipient.</td>
   </tr>
   <tr>
@@ -558,6 +566,26 @@ My work draws on nonparametric statistics, machine learning, causal inference, s
   <tr><td><sectionheading>&nbsp;&nbsp;Working papers</sectionheading></td></tr>
 </table>
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
+  <tr>
+    <td width="40%" valign="top" align="center">
+      <a href="https://arxiv.org/abs/2611.23638" target="_blank" rel="noopener noreferrer">
+        <img class="pub" src="website-photos/llm-problem-formulation.png" alt="Example child-welfare modeling prompt and LLM response with prose and code excerpts" width="80%">
+      </a>
+    </td>
+    <td width="60%" valign="top">
+      <div style="margin-top: 16px;">
+        <a href="https://arxiv.org/abs/2611.23638" target="_blank" rel="noopener noreferrer"><div class="heading">When Do LLMs Model the Right Target? Problem Formulation in High-Stakes Risk Prediction</div></a>
+        <div class="authors">J. Zhang, <b>A. Coston</b></div>
+        <i>ArXiv Preprint</i>, 2026
+      </div>
+      <p><a href="javascript:toggleblock('llm_problem_formulation_abs')">Abstract</a> |
+      <a href="https://arxiv.org/abs/2611.23638" target="_blank" rel="noopener noreferrer">ArXiv</a></p>
+      <p align="justify"><i id="llm_problem_formulation_abs">Generative AI is increasingly used to assist with data science tasks, yet fundamental questions remain about its ability to correctly formulate analytical problems. We investigate how well large language models (LLMs) can formulate prediction problems when developing models for high-stakes decision making. We focus on one particular challenge to validity: decision dependency, which arises when historical decisions affect observed outcomes. We evaluate this aspect of problem formulation in LLM-generated code and explanations across child-welfare, healthcare, and employment settings, using 11 models from OpenAI and Anthropic and seven prompt conditions. We assess whether the LLM-generated code implements a procedure appropriate for estimating the intended outcome under the study's assumptions and whether the explanation acknowledges decision dependency. We find that LLMs do not reliably address decision dependency without guidance in the prompt. When prompts specify the target, the assumption needed to estimate it, and the estimation procedure, target-aligned implementation reaches 99-100%. Among frontier models, a simple prompt description of how decisions affect outcomes appears sufficient to elicit target-aligned implementation. Some responses also acknowledge decision dependency without addressing it in their code. Our findings suggest that analysts should not rely on LLMs to correctly formulate prediction problems without explicit methodological guidance and careful review. We propose validity-centered guidelines for LLM-assisted predictive modeling, covering prompt formulation, validation of the target and estimation procedure, and identification of key assumptions. Establishing validity is a necessary early step in evaluating whether to deploy a predictive model in a high-stakes setting, but deployment requires weighing broader ethical, institutional, and practical considerations.</i></p>
+      <script type="text/javascript">
+        hideblock('llm_problem_formulation_abs');
+      </script>
+    </td>
+  </tr>
   <tr>
     <td width="40%" valign="top" align="center">
       <a href="https://arxiv.org/abs/2507.05216" target="_blank">
